@@ -24,7 +24,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        Ron Keter
       </h1>
       <a
         target="_blank"
@@ -42,25 +42,35 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        Final-year B.Sc. Computer Science student at The Hebrew University of
+        Jerusalem, specializing in Machine Learning, Artificial Intelligence,
+        and scalable backend systems. Passionate about building secure,
+        optimized applications and exploring the intersections of generative AI,
+        computer vision, and systems architecture.
       </p>
+      <p class="mt-2">AWS Certified Cloud Practitioner | Tel Aviv, Israel</p>
       <p class="mt-2">
-        Read the blog posts or check
+        Explore my
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="/about/"
         >
-          README
-        </LinkButton> for more info.
+          resume and projects
+        </LinkButton> below, or check out my work on
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="https://github.com/ronketer"
+        >
+          GitHub
+        </LinkButton>.
       </p>
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
+              Connect with me:
+            </div>
             <Socials />
           </div>
         )
