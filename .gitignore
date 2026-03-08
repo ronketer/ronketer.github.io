@@ -24,5 +24,7 @@ pnpm-debug.log*
 .idea/
 
 # pagefind
-
 public/pagefind
+
+# lock files (project uses pnpm)
+package-lock.json
