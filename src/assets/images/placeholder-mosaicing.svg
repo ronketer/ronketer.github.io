@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#1e2538"/>
+
+  <defs>
+    <pattern id="grid-mo" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.15" opacity="0.25"/>
+    </pattern>
+    <marker id="arr-mo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8" opacity="0.75"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-mo)"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="monospace" font-size="13" fill="#38bdf8" opacity="0.7" letter-spacing="2">STEREO MOSAICING — PUSHBROOM SLIT-SCAN</text>
+
+  <!-- === X-T Volume (left) === -->
+  <rect x="90" y="72" width="240" height="300" rx="4" fill="#161b27" fill-opacity="0.55" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
+
+  <!-- Frame rows inside x-t volume (time slices) -->
+  <g opacity="0.18" stroke="#38bdf8" stroke-width="0.9">
+    <line x1="91" y1="105" x2="329" y2="105"/>
+    <line x1="91" y1="135" x2="329" y2="135"/>
+    <line x1="91" y1="165" x2="329" y2="165"/>
+    <line x1="91" y1="195" x2="329" y2="195"/>
+    <line x1="91" y1="225" x2="329" y2="225"/>
+    <line x1="91" y1="255" x2="329" y2="255"/>
+    <line x1="91" y1="285" x2="329" y2="285"/>
+    <line x1="91" y1="315" x2="329" y2="315"/>
+    <line x1="91" y1="345" x2="329" y2="345"/>
+  </g>
+
+  <!-- Slit: vertical dashed line through x-t volume -->
+  <line x1="210" y1="72" x2="210" y2="372" stroke="#38bdf8" stroke-width="2" stroke-dasharray="7,4" opacity="0.9"/>
+  <!-- Slit glow -->
+  <rect x="207" y="72" width="6" height="300" fill="#38bdf8" opacity="0.07"/>
+
+  <!-- "slit" label above -->
+  <text x="210" y="63" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8" opacity="0.85">slit</text>
+
+  <!-- Axis lines -->
+  <line x1="90" y1="372" x2="90" y2="75" stroke="#38bdf8" stroke-width="0.8" opacity="0.3" marker-end="url(#arr-mo)"/>
+  <line x1="90" y1="372" x2="332" y2="372" stroke="#38bdf8" stroke-width="0.8" opacity="0.3" marker-end="url(#arr-mo)"/>
+
+  <!-- Axis labels -->
+  <text x="55" y="222" text-anchor="middle" font-family="monospace" font-size="11" fill="#64748b" opacity="0.85" transform="rotate(-90,55,222)">t (frames)</text>
+  <text x="210" y="395" text-anchor="middle" font-family="monospace" font-size="11" fill="#64748b" opacity="0.85">x (position)</text>
+
+  <!-- Frame time labels -->
+  <text x="79" y="93"  text-anchor="end" font-family="monospace" font-size="9" fill="#38bdf8" opacity="0.4">t₀</text>
+  <text x="79" y="153" text-anchor="end" font-family="monospace" font-size="9" fill="#38bdf8" opacity="0.4">t₂</text>
+  <text x="79" y="223" text-anchor="end" font-family="monospace" font-size="9" fill="#38bdf8" opacity="0.4">t₄</text>
+  <text x="79" y="293" text-anchor="end" font-family="monospace" font-size="9" fill="#38bdf8" opacity="0.4">t₆</text>
+  <text x="79" y="363" text-anchor="end" font-family="monospace" font-size="9" fill="#38bdf8" opacity="0.4">tₙ</text>
+
+  <!-- === Panorama output (right) === -->
+  <text x="560" y="148" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8" opacity="0.6" letter-spacing="1">PANORAMA OUTPUT</text>
+
+  <!-- Wide panorama canvas -->
+  <rect x="380" y="162" width="360" height="100" rx="4" fill="#161b27" fill-opacity="0.65" stroke="#38bdf8" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Horizontal scan lines inside panorama -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
+    <line x1="381" y1="182" x2="739" y2="182"/>
+    <line x1="381" y1="198" x2="739" y2="198"/>
+    <line x1="381" y1="214" x2="739" y2="214"/>
+    <line x1="381" y1="230" x2="739" y2="230"/>
+    <line x1="381" y1="246" x2="739" y2="246"/>
+    <line x1="381" y1="262" x2="739" y2="262"/>
+  </g>
+
+  <!-- Vertical slit seams inside panorama (assembled columns) -->
+  <g opacity="0.13" stroke="#38bdf8" stroke-width="0.6">
+    <line x1="425" y1="163" x2="425" y2="261"/>
+    <line x1="470" y1="163" x2="470" y2="261"/>
+    <line x1="515" y1="163" x2="515" y2="261"/>
+    <line x1="560" y1="163" x2="560" y2="261"/>
+    <line x1="605" y1="163" x2="605" y2="261"/>
+    <line x1="650" y1="163" x2="650" y2="261"/>
+    <line x1="695" y1="163" x2="695" y2="261"/>
+  </g>
+
+  <!-- Arrow from slit midpoint to panorama -->
+  <path d="M 218 222 Q 310 222 378 212" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arr-mo)" opacity="0.8"/>
+
+  <!-- Stats bar -->
+  <rect x="100" y="408" width="600" height="28" rx="4" fill="#161b27" opacity="0.6"/>
+  <text x="400" y="426" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8" opacity="0.7">Lucas-Kanade optical flow · Shi-Tomasi corners · NumPy · OpenCV</text>
+</svg>

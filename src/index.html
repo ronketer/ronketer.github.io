@@ -42,12 +42,6 @@
       <li><a href="#about"    class="text-sm text-slate-400 hover:text-white transition-colors duration-200">About</a></li>
       <li><a href="#projects" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Projects</a></li>
       <li><a href="#contact"  class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Contact</a></li>
-      <li>
-        <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer"
-           class="text-sm font-mono px-3 py-1.5 rounded-md border border-accent/40 text-accent hover:bg-accent/10 transition-colors duration-200">
-          Resume
-        </a>
-      </li>
     </ul>
 
     <!-- Mobile hamburger -->
@@ -68,10 +62,6 @@
     <a href="#about"    class="text-2xl font-semibold text-slate-200 hover:text-accent transition-colors">About</a>
     <a href="#projects" class="text-2xl font-semibold text-slate-200 hover:text-accent transition-colors">Projects</a>
     <a href="#contact"  class="text-2xl font-semibold text-slate-200 hover:text-accent transition-colors">Contact</a>
-    <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer"
-       class="text-xl font-mono px-5 py-2.5 rounded-lg border border-accent/50 text-accent hover:bg-accent/10 transition-colors">
-      Resume
-    </a>
   </div>
 
 
@@ -97,10 +87,10 @@
         Ron Keter
       </h1>
 
-      <p class="text-xl text-slate-400 mb-6 opacity-0 translate-y-6 transition-all duration-700"
-         data-reveal style="transition-delay: 300ms;">
-        I build OS systems, CV pipelines, and backend APIs.
-      </p>
+      <p id="hero-tagline"
+         class="text-xl text-slate-400 mb-6 opacity-0 translate-y-6 transition-all duration-700"
+         data-reveal style="transition-delay: 300ms;"
+         aria-label="I build OS systems, CV pipelines, and backend APIs."></p>
 
       <!-- Domain pills -->
       <div class="flex flex-wrap gap-2 mb-10 opacity-0 translate-y-6 transition-all duration-700"
@@ -177,21 +167,20 @@
       <div class="space-y-4 opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 150ms;">
 
         <!-- AWS cert card -->
-        <div class="bg-navy rounded-xl p-5 flex items-center gap-5"
-             style="border: 1px solid rgba(56,189,248,0.25); box-shadow: 0 0 28px rgba(56,189,248,0.10);">
-          <!-- AWS logo -->
-          <svg class="w-14 h-14 flex-shrink-0" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="Amazon Web Services logo">
-            <rect width="80" height="80" rx="10" fill="#232F3E"/>
-            <path d="M22 47l-2.8 7.5h-1.8l-2.8-7.5h1.8l1.9 5.7 1.9-5.7H22zm6.2 5.5c0 .7-.2 1.2-.7 1.6-.5.4-1.1.6-1.8.6-.7 0-1.2-.1-1.6-.4v-1.5c.5.4 1 .5 1.5.5.3 0 .6-.1.8-.2.2-.2.3-.4.3-.6 0-.3-.2-.6-.7-.9l-.4-.2c-.9-.4-1.4-1-1.4-1.8 0-.6.2-1.1.7-1.5.4-.4 1-.5 1.7-.5.6 0 1.1.1 1.5.3v1.4c-.4-.3-.8-.4-1.3-.4-.3 0-.5.1-.7.2-.2.1-.2.3-.2.5 0 .3.2.5.7.8l.4.2c1 .4 1.4 1 1.4 1.9zm6.3 2.1h-1.7l-.6-1.9h-2.6l-.6 1.9h-1.6l2.6-7.5h1.9l2.6 7.5zm-2.7-3.3l-.9-2.7-.8 2.7h1.7zm7.4 3.3h-1.7V48.2h-2v-1.4H43v1.4h-2v6.9zm5.8 0h-1.7v-7.5h1.7v7.5z" fill="#FF9900"/>
-            <path d="M52 39.5c-6.8 3-14 4.5-21.5 4.5-10.3 0-20-2.7-28.5-7.6-.6-.4-1.1.4-.5.8 8.5 6.2 19 9.8 30 9.8 8.2 0 17.3-2.2 23.8-6.2 1-.6.1-1.7-3.3-1.3z" fill="#FF9900"/>
-            <path d="M55 36.8c-.4.5.1 1.4.7.9 2-1.2 4-2.8 3.7-4.4-.3-1.6-1.9-2.3-3.9-2.8-.5-.1-.8.7-.3.9 1.3.4 2.4 1.1 2.2 2-.2 1-1.1 2.1-2.4 3.4z" fill="#FF9900"/>
-          </svg>
+        <a href="https://www.credly.com/badges/22f2122f-1936-40d5-834a-a5b0454a0a56/public_url"
+           target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-5 bg-navy rounded-xl p-5 cursor-pointer hover:opacity-90 transition-opacity duration-200"
+           style="border: 1px solid rgba(56,189,248,0.25); box-shadow: 0 0 28px rgba(56,189,248,0.10);"
+           aria-label="View AWS Certified Cloud Practitioner credential on Credly">
+          <img src="./assets/images/aws-certified-cloud-practitioner.png"
+               alt="AWS Certified Cloud Practitioner badge"
+               class="w-14 h-14 flex-shrink-0 object-contain" />
           <div>
             <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Certified</p>
             <p class="font-semibold text-white text-sm">AWS Cloud Practitioner</p>
             <p class="text-xs text-muted mt-0.5">Amazon Web Services</p>
           </div>
-        </div>
+        </a>
 
         <!-- Education card -->
         <div class="bg-navy border border-white/8 rounded-xl p-5">
@@ -226,9 +215,6 @@
           <img src="./assets/images/placeholder-threads.svg"
                alt="Thread state diagram showing READY, RUNNING, BLOCKED, and TERMINATED states with transition arrows for signal-driven preemption"
                class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
-          <span class="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded bg-charcoal/85 text-muted border border-white/10">
-            Hebrew University &middot; OS Course
-          </span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">User-Level Threads Library</h3>
@@ -244,7 +230,7 @@
             <span class="tech-pill">sigsetjmp</span>
             <span class="tech-pill">Round-robin</span>
           </div>
-          <a href="https://github.com/ronketer/user_level_threads" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/ronketer/uthreads-scheduler" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -255,15 +241,46 @@
         </div>
       </article>
 
-      <!-- Project 2: Stereo Visual SLAM -->
+      <!-- Project 2: MapReduce Framework -->
       <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 150ms;">
+        <div class="aspect-video bg-navy-light relative overflow-hidden">
+          <img src="./assets/images/placeholder-mapreduce.svg"
+               alt="MapReduce phase flow: parallel map threads feeding atomic counter, shuffle merging sorted intermediate vectors, parallel reduce threads emitting output"
+               class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-white mb-2">MapReduce Framework</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Built a multi-threaded MapReduce engine from scratch in C++17. Threads claim work via a shared
+            <code class="text-accent/80 font-mono text-xs">std::atomic&lt;uint64_t&gt;</code> counter
+            (lock-free work-stealing), eliminating a thread-pool queue. Per-thread intermediate vectors
+            prevent emit contention; a two-phase <code class="text-accent/80 font-mono text-xs">pthread</code>
+            barrier synchronizes map &rarr; shuffle &rarr; reduce. Live job-state reporting via atomic
+            counters, no stalling worker threads.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="tech-pill">C++17</span>
+            <span class="tech-pill">pthreads</span>
+            <span class="tech-pill">std::atomic</span>
+            <span class="tech-pill">pthread_barrier</span>
+          </div>
+          <a href="https://github.com/ronketer/mapreduce-framework" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            View on GitHub
+            <span class="translate-x-0 group-hover/link:translate-x-1 transition-transform duration-200">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3: Stereo Visual SLAM -->
+      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 225ms;">
         <div class="aspect-video bg-navy-light relative overflow-hidden">
           <img src="./assets/images/placeholder-slam.svg"
                alt="3D ego-motion trajectory reconstruction plot from stereo visual SLAM on 2600+ KITTI dataset frames"
                class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
-          <span class="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded bg-charcoal/85 text-muted border border-white/10">
-            Hebrew University &middot; CV Course
-          </span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Stereo Visual SLAM</h3>
@@ -279,7 +296,7 @@
             <span class="tech-pill">RANSAC</span>
             <span class="tech-pill">KITTI</span>
           </div>
-          <a href="https://github.com/ronketer/kitti_visual_slam" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/ronketer/kitti-visual-slam" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -290,15 +307,45 @@
         </div>
       </article>
 
-      <!-- Project 3: Autonomous Anki Pipeline -->
-      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 225ms;">
+      <!-- Project 4: Stereo Mosaicing -->
+      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 300ms;">
+        <div class="aspect-video bg-navy-light relative overflow-hidden">
+          <img src="./assets/images/placeholder-mosaicing.svg"
+               alt="Space-time volume diagram: stacked video frames with a vertical slit line sweeping across to stitch a wide panorama canvas"
+               class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-white mb-2">Stereo Mosaicing</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Image processing pipeline that turns a panning video into a wide-angle panorama.
+            Tracks Shi-Tomasi corners across frames with Lucas-Kanade optical flow to estimate
+            per-frame translation, vertically stabilizes the sequence, then composites a panorama
+            by sweeping a virtual slit through a space-time volume &mdash; different slit positions
+            produce different perspective outputs from the same input.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">OpenCV</span>
+            <span class="tech-pill">Lucas-Kanade</span>
+            <span class="tech-pill">NumPy</span>
+          </div>
+          <a href="https://github.com/ronketer/Stereo-Mosaicing" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            View on GitHub
+            <span class="translate-x-0 group-hover/link:translate-x-1 transition-transform duration-200">&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 5: Autonomous Anki Pipeline -->
+      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 375ms;">
         <div class="aspect-video bg-navy-light relative overflow-hidden">
           <img src="./assets/images/placeholder-anki.svg"
                alt="Multi-agent pipeline diagram: Siyuan REST API feeds an LLM Writer agent, reviewed by an LLM Reviewer agent, output as local Anki flashcards"
                class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
-          <span class="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded bg-charcoal/85 text-muted border border-white/10">
-            Personal Project
-          </span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Autonomous Knowledge &rarr; Anki Pipeline</h3>
@@ -314,7 +361,7 @@
             <span class="tech-pill">REST API</span>
             <span class="tech-pill">Local</span>
           </div>
-          <a href="https://github.com/ronketer/siyuan_to_anki" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/ronketer/siyuan-to-anki-generator" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -325,15 +372,12 @@
         </div>
       </article>
 
-      <!-- Project 4: Secure Todo REST API -->
-      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 300ms;">
+      <!-- Project 6: Secure Todo REST API -->
+      <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 450ms;">
         <div class="aspect-video bg-navy-light relative overflow-hidden">
           <img src="./assets/images/placeholder-todo.svg"
                alt="REST API route table showing auth and todo endpoints, with JWT authentication and CI/CD pipeline indicators"
                class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
-          <span class="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded bg-charcoal/85 text-muted border border-white/10">
-            Personal Project
-          </span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Secure Todo REST API</h3>

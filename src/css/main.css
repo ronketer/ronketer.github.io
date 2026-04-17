@@ -9,6 +9,17 @@
   ::-webkit-scrollbar       { width: 6px; }
   ::-webkit-scrollbar-track { background: #0f1117; }
   ::-webkit-scrollbar-thumb { background: #1e2538; border-radius: 3px; }
+
+  :focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 @layer components {
@@ -42,5 +53,22 @@
   }
   .section-label {
     @apply text-xs font-mono text-accent uppercase tracking-widest mb-2 block;
+  }
+  .typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background-color: #38bdf8;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: cursor-blink 1s step-end infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce-slow  { animation: none; }
+  .typewriter-cursor    { animation: none; }
+  [data-reveal] {
+    transition: none !important;
   }
 }

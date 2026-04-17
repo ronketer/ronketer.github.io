@@ -9,7 +9,7 @@ module.exports = {
         'navy-light': '#1e2538',
         accent:       '#38bdf8',
         'accent-dim': '#0ea5e9',
-        muted:        '#64748b',
+        muted:        '#7b8fa6',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
