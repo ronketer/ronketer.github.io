@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#1e2538"/>
+
+  <defs>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8" opacity="0.8"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid3)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="monospace" font-size="13" fill="#38bdf8" opacity="0.7" letter-spacing="2">AUTONOMOUS KNOWLEDGE → ANKI PIPELINE</text>
+
+  <!-- Siyuan REST API node -->
+  <rect x="40" y="165" width="140" height="52" rx="8" fill="#161b27" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+  <text x="110" y="188" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8">Siyuan Notes</text>
+  <text x="110" y="205" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">REST API</text>
+
+  <!-- Arrow: Siyuan → Writer -->
+  <line x1="180" y1="191" x2="248" y2="191" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr3)" opacity="0.7"/>
+  <text x="214" y="183" text-anchor="middle" font-family="monospace" font-size="9" fill="#64748b">fetch notes</text>
+
+  <!-- LLM Writer agent -->
+  <rect x="250" y="155" width="130" height="72" rx="8" fill="#0ea5e9" fill-opacity="0.12" stroke="#38bdf8" stroke-width="2"/>
+  <text x="315" y="182" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8">LLM Writer</text>
+  <text x="315" y="198" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Agent</text>
+  <text x="315" y="215" text-anchor="middle" font-family="monospace" font-size="9" fill="#475569">draft cards</text>
+
+  <!-- Arrow: Writer → Reviewer -->
+  <line x1="380" y1="191" x2="448" y2="191" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr3)" opacity="0.7"/>
+  <text x="414" y="183" text-anchor="middle" font-family="monospace" font-size="9" fill="#64748b">review</text>
+
+  <!-- LLM Reviewer agent -->
+  <rect x="450" y="155" width="130" height="72" rx="8" fill="#0ea5e9" fill-opacity="0.08" stroke="#38bdf8" stroke-width="2"/>
+  <text x="515" y="182" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8">LLM Reviewer</text>
+  <text x="515" y="198" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Agent</text>
+  <text x="515" y="215" text-anchor="middle" font-family="monospace" font-size="9" fill="#475569">quality check</text>
+
+  <!-- Revision loop arrow -->
+  <path d="M 515 155 Q 515 110 315 110 Q 315 155 315 155" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr3)" opacity="0.5"/>
+  <text x="415" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#64748b">revision loop</text>
+
+  <!-- Arrow: Reviewer → Anki -->
+  <line x1="580" y1="191" x2="648" y2="191" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr3)" opacity="0.7"/>
+  <text x="614" y="183" text-anchor="middle" font-family="monospace" font-size="9" fill="#64748b">export</text>
+
+  <!-- Anki card output -->
+  <rect x="650" y="155" width="110" height="72" rx="8" fill="#161b27" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+  <text x="705" y="182" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8">Anki Cards</text>
+  <text x="705" y="198" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">local .apkg</text>
+  <rect x="670" y="208" width="70" height="10" rx="2" fill="#38bdf8" opacity="0.2"/>
+  <rect x="670" y="208" width="50" height="10" rx="2" fill="#38bdf8" opacity="0.3"/>
+
+  <!-- AutoGen label -->
+  <rect x="230" y="270" width="340" height="36" rx="6" fill="#161b27" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
+  <text x="400" y="293" text-anchor="middle" font-family="monospace" font-size="11" fill="#64748b">AutoGen multi-agent framework</text>
+
+  <!-- Local badge -->
+  <rect x="290" y="355" width="220" height="32" rx="6" fill="#161b27" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+  <text x="400" y="376" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8" opacity="0.8">fully local — no data leaves the machine</text>
+</svg>
