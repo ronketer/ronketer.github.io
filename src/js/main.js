@@ -80,23 +80,22 @@ if (prefersReducedMotion) {
   setTimeout(typeNext, 1050);
 }
 
-// Video cards: lazy-load src on viewport entry, hover-to-play on desktop, click-to-toggle on mobile
+// Video cards: lazy-load on viewport entry, hover-to-play on desktop, click-to-toggle on mobile
+// src is set directly in HTML so Parcel bundles the files; preload="none" defers actual download.
 const videoContainers = document.querySelectorAll('[data-video-container]');
 
 videoContainers.forEach(container => {
-  const video = container.querySelector('video[data-src]');
+  const video = container.querySelector('video');
   const overlay = container.querySelector('.play-overlay');
   const playBtn = container.querySelector('.play-btn');
   if (!video || !overlay) return;
 
-  let srcLoaded = false;
+  let loadTriggered = false;
   const originalBtnLabel = playBtn?.getAttribute('aria-label') ?? 'Play demo video';
 
   function ensureLoaded(onReady) {
-    if (srcLoaded) { onReady(); return; }
-    video.src = video.dataset.src;
-    video.load();
-    srcLoaded = true;
+    if (video.readyState >= 2) { onReady(); return; }
+    if (!loadTriggered) { loadTriggered = true; video.load(); }
     video.addEventListener('canplay', onReady, { once: true });
   }
 
