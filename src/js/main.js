@@ -79,3 +79,52 @@ if (prefersReducedMotion) {
   }
   setTimeout(typeNext, 1050);
 }
+
+// Video cards: lazy-load src on viewport entry, hover-to-play on desktop, click-to-toggle on mobile
+const videoContainers = document.querySelectorAll('[data-video-container]');
+
+videoContainers.forEach(container => {
+  const video = container.querySelector('video[data-src]');
+  const overlay = container.querySelector('.play-overlay');
+  const playBtn = container.querySelector('.play-btn');
+  if (!video || !overlay) return;
+
+  let srcLoaded = false;
+  const originalBtnLabel = playBtn?.getAttribute('aria-label') ?? 'Play demo video';
+
+  function ensureLoaded(onReady) {
+    if (srcLoaded) { onReady(); return; }
+    video.src = video.dataset.src;
+    video.load();
+    srcLoaded = true;
+    video.addEventListener('canplay', onReady, { once: true });
+  }
+
+  function startPlay() {
+    ensureLoaded(() => {
+      video.play().catch(() => {});
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      playBtn?.setAttribute('aria-label', 'Pause demo video');
+    });
+  }
+
+  function stopPlay() {
+    video.pause();
+    video.currentTime = 0;
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    playBtn?.setAttribute('aria-label', originalBtnLabel);
+  }
+
+  new IntersectionObserver(
+    ([e]) => { if (!e.isIntersecting && !video.paused) stopPlay(); },
+    { threshold: 0.15 }
+  ).observe(container);
+
+  if (!prefersReducedMotion) {
+    container.addEventListener('mouseenter', startPlay);
+    container.addEventListener('mouseleave', stopPlay);
+  }
+
+  playBtn?.addEventListener('click', (e) => { e.stopPropagation(); startPlay(); });
+  container.addEventListener('click', () => { if (!video.paused) stopPlay(); });
+});

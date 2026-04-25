@@ -309,10 +309,27 @@
 
       <!-- Project 4: Stereo Mosaicing -->
       <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 300ms;">
-        <div class="aspect-video bg-navy-light relative overflow-hidden">
-          <img src="./assets/images/placeholder-mosaicing.svg"
-               alt="Space-time volume diagram: stacked video frames with a vertical slit line sweeping across to stitch a wide panorama canvas"
-               class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
+        <div class="aspect-video bg-navy-light relative overflow-hidden cursor-pointer"
+             data-video-container>
+          <video
+            class="w-full h-full object-cover"
+            muted loop playsinline preload="none"
+            data-src="./assets/videos/demo_stereo_mosaicing.mp4"
+            aria-label="Stereo Mosaicing demo: panorama stitching pipeline">
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300"
+               style="background: rgba(15,17,23,0.5);">
+            <button class="play-btn w-14 h-14 rounded-full flex items-center justify-center border border-accent/40 hover:border-accent/80 hover:bg-white/5 transition-all duration-200 cursor-pointer"
+                    style="background: rgba(15,17,23,0.7); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);"
+                    aria-label="Play Stereo Mosaicing demo video">
+              <svg class="w-6 h-6 text-accent ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+          <span class="absolute top-3 right-3 text-xs font-mono text-accent px-2 py-0.5 rounded-md select-none pointer-events-none"
+                aria-hidden="true"
+                style="background: rgba(15,17,23,0.8); border: 1px solid rgba(56,189,248,0.25);">DEMO</span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Stereo Mosaicing</h3>
@@ -340,28 +357,45 @@
         </div>
       </article>
 
-      <!-- Project 5: Autonomous Anki Pipeline -->
+      <!-- Project 5: Procedural Game Engine -->
       <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 375ms;">
-        <div class="aspect-video bg-navy-light relative overflow-hidden">
-          <img src="./assets/images/placeholder-anki.svg"
-               alt="Multi-agent pipeline diagram: Siyuan REST API feeds an LLM Writer agent, reviewed by an LLM Reviewer agent, output as local Anki flashcards"
-               class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
+        <div class="aspect-video bg-navy-light relative overflow-hidden cursor-pointer"
+             data-video-container>
+          <video
+            class="w-full h-full object-cover"
+            muted loop playsinline preload="none"
+            data-src="./assets/videos/demo_procedural_game_engine.mp4"
+            aria-label="Procedural Game Engine demo video">
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300"
+               style="background: rgba(15,17,23,0.5);">
+            <button class="play-btn w-14 h-14 rounded-full flex items-center justify-center border border-accent/40 hover:border-accent/80 hover:bg-white/5 transition-all duration-200 cursor-pointer"
+                    style="background: rgba(15,17,23,0.7); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);"
+                    aria-label="Play Procedural Game Engine demo video">
+              <svg class="w-6 h-6 text-accent ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+          <span class="absolute top-3 right-3 text-xs font-mono text-accent px-2 py-0.5 rounded-md select-none pointer-events-none"
+                aria-hidden="true"
+                style="background: rgba(15,17,23,0.8); border: 1px solid rgba(56,189,248,0.25);">DEMO</span>
         </div>
         <div class="p-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Autonomous Knowledge &rarr; Anki Pipeline</h3>
+          <h3 class="text-lg font-semibold text-white mb-2">Procedural Game Engine</h3>
           <p class="text-sm text-slate-400 leading-relaxed mb-4">
-            Multi-agent LLM system built with AutoGen that pulls notes from a Siyuan knowledge base
-            via REST API, runs a writer&rarr;reviewer loop to generate high-quality flashcards,
-            and exports them directly to Anki. Runs fully local &mdash; no data leaves the machine.
+            2D game engine built in Java that generates an infinite world using Perlin Noise &mdash;
+            complete with physics, animated flora, and event-driven weather systems.
+            Architecture applies Observer Pattern, Factory Method, and seed-based reproducible
+            randomness to manage complex game state across an unbounded world.
           </p>
           <div class="flex flex-wrap gap-1.5 mb-5">
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">AutoGen</span>
-            <span class="tech-pill">LLM</span>
-            <span class="tech-pill">REST API</span>
-            <span class="tech-pill">Local</span>
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">DanoGameLab</span>
+            <span class="tech-pill">Perlin Noise</span>
+            <span class="tech-pill">Observer Pattern</span>
           </div>
-          <a href="https://github.com/ronketer/siyuan-to-anki-generator" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/ronketer/procedural-game-engine" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 text-sm font-mono text-accent hover:text-white transition-colors duration-200 group/link cursor-pointer">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -374,10 +408,27 @@
 
       <!-- Project 6: Secure Todo REST API -->
       <article class="card opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 450ms;">
-        <div class="aspect-video bg-navy-light relative overflow-hidden">
-          <img src="./assets/images/placeholder-todo.svg"
-               alt="REST API route table showing auth and todo endpoints, with JWT authentication and CI/CD pipeline indicators"
-               class="w-full h-full object-cover opacity-80 transition-opacity duration-300" />
+        <div class="aspect-video bg-navy-light relative overflow-hidden cursor-pointer"
+             data-video-container>
+          <video
+            class="w-full h-full object-cover"
+            muted loop playsinline preload="none"
+            data-src="./assets/videos/demo_todo_app.mp4"
+            aria-label="Secure Todo REST API demo video">
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300"
+               style="background: rgba(15,17,23,0.5);">
+            <button class="play-btn w-14 h-14 rounded-full flex items-center justify-center border border-accent/40 hover:border-accent/80 hover:bg-white/5 transition-all duration-200 cursor-pointer"
+                    style="background: rgba(15,17,23,0.7); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);"
+                    aria-label="Play Secure Todo REST API demo video">
+              <svg class="w-6 h-6 text-accent ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+          <span class="absolute top-3 right-3 text-xs font-mono text-accent px-2 py-0.5 rounded-md select-none pointer-events-none"
+                aria-hidden="true"
+                style="background: rgba(15,17,23,0.8); border: 1px solid rgba(56,189,248,0.25);">DEMO</span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Secure Todo REST API</h3>
