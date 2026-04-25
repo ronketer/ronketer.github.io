@@ -52,6 +52,18 @@
     @apply border-accent/60 shadow-glow-card ring-1 ring-accent/20 z-10;
     transform: scale(1.02);
   }
+
+  /* Modal Animations */
+  #video-modal[open] {
+    animation: modal-fade-in 0.3s ease-out forwards;
+  }
+  @keyframes modal-fade-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
   .section-heading {
     @apply text-3xl lg:text-4xl font-semibold text-white mb-3;
   }

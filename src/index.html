@@ -330,6 +330,7 @@
           <span class="absolute top-3 right-3 text-xs font-mono text-accent px-2 py-0.5 rounded-md select-none pointer-events-none"
                 aria-hidden="true"
                 style="background: rgba(15,17,23,0.8); border: 1px solid rgba(56,189,248,0.25);">DEMO</span>
+          <span class="expand-hint" aria-hidden="true">Click to expand</span>
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-white mb-2">Stereo Mosaicing</h3>
@@ -519,7 +520,17 @@
     </div>
   </footer>
 
-  <!-- Deep Link Active State Styles -->
+  <!-- Fullscreen Video Modal -->
+  <dialog id="video-modal" aria-label="Fullscreen video player">
+    <button class="modal-close-btn" aria-label="Close video player" title="Press ESC to close">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div id="modal-video-container"></div>
+  </dialog>
+
+  <!-- Deep Link Active State & Fullscreen Modal Styles -->
   <style>
     /* :target pseudo-class for deep linking — applies active state to card when hash matches */
     article:target {
@@ -550,9 +561,153 @@
         transform: none;
       }
     }
+
+    /* Fullscreen Video Modal */
+    #video-modal {
+      position: fixed;
+      inset: 0;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(15, 17, 23, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      z-index: 100;
+    }
+
+    #video-modal::backdrop {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #video-modal[open] {
+      animation: modal-fade-in 300ms ease-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes modal-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #video-modal[open] video {
+      animation: video-scale-in 300ms ease-out;
+    }
+
+    @keyframes video-scale-in {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    #modal-video-container {
+      width: 95vw;
+      height: 95vh;
+      max-width: 1600px;
+      max-height: 900px;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 80px rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    #modal-video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #000;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(15, 17, 23, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      cursor: pointer;
+      color: rgba(56, 189, 248, 0.9);
+      transition: all 200ms ease-out;
+      z-index: 101;
+    }
+
+    .modal-close-btn:hover {
+      background-color: rgba(15, 17, 23, 0.95);
+      border-color: rgba(56, 189, 248, 0.6);
+      color: #38bdf8;
+    }
+
+    .modal-close-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Video card cursor hint */
+    [data-video-container] {
+      cursor: pointer;
+    }
+
+    [data-video-container]:hover .expand-hint {
+      opacity: 1;
+    }
+
+    .expand-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(56, 189, 248, 0.6);
+      opacity: 0;
+      transition: opacity 200ms ease-out;
+      pointer-events: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #video-modal[open],
+      #video-modal[open] video {
+        animation: none;
+      }
+      .expand-hint {
+        transition: none;
+      }
+    }
   </style>
 
   <script type="module" src="./js/main.js"></script>
+
+  <!-- Fullscreen Video Modal -->
+  <dialog id="video-modal" class="p-0 bg-transparent backdrop:bg-charcoal/95 backdrop:backdrop-blur-md border-none max-w-[95vw] max-h-[95vh] outline-none">
+    <div class="relative w-full h-full flex items-center justify-center">
+      <button id="modal-close" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors p-2 cursor-pointer" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <video id="modal-video" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl border border-white/10" controls playsinline></video>
+    </div>
+  </dialog>
 
 </body>
 </html>

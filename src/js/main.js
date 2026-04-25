@@ -83,7 +83,28 @@ if (prefersReducedMotion) {
 // Video cards: lazy-load on viewport entry, hover-to-play on desktop, click-to-toggle on mobile
 // src is set directly in HTML so Parcel bundles the files; preload="none" defers actual download.
 const videoContainers = document.querySelectorAll('[data-video-container]');
-const videoControls = new Map(); // Store start/stop functions by container ID
+const videoControls = new Map();
+
+// Modal elements
+const modal = document.getElementById('video-modal');
+const modalVideo = document.getElementById('modal-video');
+const modalClose = document.getElementById('modal-close');
+
+function openModal(sourceVideo) {
+  modalVideo.src = sourceVideo.src;
+  modalVideo.currentTime = sourceVideo.currentTime;
+  modal.showModal();
+  modalVideo.play().catch(() => {});
+}
+
+function closeModal() {
+  modal.close();
+  modalVideo.pause();
+  modalVideo.src = '';
+}
+
+modalClose?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
 videoContainers.forEach(container => {
   const video = container.querySelector('video');
@@ -116,7 +137,7 @@ videoContainers.forEach(container => {
     playBtn?.setAttribute('aria-label', originalBtnLabel);
   }
 
-  // Register for external control (like deep linking)
+  // Register for external control
   if (card.id) {
     videoControls.set(card.id, { startPlay, stopPlay });
   }
@@ -131,8 +152,20 @@ videoContainers.forEach(container => {
     container.addEventListener('mouseleave', stopPlay);
   }
 
-  playBtn?.addEventListener('click', (e) => { e.stopPropagation(); startPlay(); });
-  container.addEventListener('click', () => { if (!video.paused) stopPlay(); });
+  playBtn?.addEventListener('click', (e) => { 
+    e.stopPropagation(); 
+    openModal(video); 
+  });
+  
+  container.addEventListener('click', () => { 
+    if (window.innerWidth < 1024) {
+      // On mobile/tablet, click opens modal
+      openModal(video);
+    } else {
+      // On desktop, click toggles in-card playback
+      if (!video.paused) stopPlay(); else startPlay();
+    }
+  });
 });
 
 // Deep Linking: Auto-play video if URL hash matches a project card
