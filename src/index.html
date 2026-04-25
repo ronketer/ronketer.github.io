@@ -309,10 +309,10 @@
 
       <!-- Project 4: Stereo Mosaicing -->
       <article id="project-mosaicing" class="card lg:col-span-2 opacity-0 translate-y-6 transition-all duration-700" data-reveal style="transition-delay: 300ms; scroll-margin-top: 90px; border-color: rgba(56,189,248,0.25);">
-        <div class="aspect-[2.4/1] bg-navy-light relative overflow-hidden cursor-pointer"
+        <div class="w-full bg-navy-light relative overflow-hidden" 
              data-video-container>
           <video
-            class="w-full h-full object-cover"
+            class="w-full h-auto block"
             muted loop playsinline preload="none"
             src="./assets/videos/demo_stereo_mosaicing.mp4"
             aria-label="Stereo Mosaicing demo: panorama stitching pipeline">
@@ -697,17 +697,6 @@
 
   <script type="module" src="./js/main.js"></script>
 
-  <!-- Fullscreen Video Modal -->
-  <dialog id="video-modal" class="p-0 bg-transparent backdrop:bg-charcoal/95 backdrop:backdrop-blur-md border-none max-w-[95vw] max-h-[95vh] outline-none">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button id="modal-close" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors p-2 cursor-pointer" aria-label="Close modal">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-      <video id="modal-video" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl border border-white/10" controls playsinline></video>
-    </div>
-  </dialog>
 
 </body>
 </html>

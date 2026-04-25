@@ -80,41 +80,18 @@ if (prefersReducedMotion) {
   setTimeout(typeNext, 1050);
 }
 
-// Video cards: lazy-load on viewport entry, hover-to-play on desktop, click-to-toggle on mobile
+// Video cards: lazy-load on viewport entry, hover-to-play on desktop, click-to-toggle
 // src is set directly in HTML so Parcel bundles the files; preload="none" defers actual download.
 const videoContainers = document.querySelectorAll('[data-video-container]');
 const videoControls = new Map();
 
-// Modal elements
-const modal = document.getElementById('video-modal');
-const modalVideo = document.getElementById('modal-video');
-const modalClose = document.getElementById('modal-close');
-
-function openModal(sourceVideo) {
-  modalVideo.src = sourceVideo.src;
-  modalVideo.currentTime = sourceVideo.currentTime;
-  modal.showModal();
-  modalVideo.play().catch(() => {});
-}
-
-function closeModal() {
-  modal.close();
-  modalVideo.pause();
-  modalVideo.src = '';
-}
-
-modalClose?.addEventListener('click', closeModal);
-modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
 videoContainers.forEach(container => {
   const video = container.querySelector('video');
   const overlay = container.querySelector('.play-overlay');
-  const playBtn = container.querySelector('.play-btn');
   const card = container.closest('article');
   if (!video || !overlay || !card) return;
 
   let loadTriggered = false;
-  const originalBtnLabel = playBtn?.getAttribute('aria-label') ?? 'Play demo video';
 
   function ensureLoaded(onReady) {
     if (video.readyState >= 2) { onReady(); return; }
@@ -126,7 +103,6 @@ videoContainers.forEach(container => {
     ensureLoaded(() => {
       video.play().catch(() => {});
       overlay.classList.add('opacity-0', 'pointer-events-none');
-      playBtn?.setAttribute('aria-label', 'Pause demo video');
     });
   }
 
@@ -134,7 +110,6 @@ videoContainers.forEach(container => {
     video.pause();
     video.currentTime = 0;
     overlay.classList.remove('opacity-0', 'pointer-events-none');
-    playBtn?.setAttribute('aria-label', originalBtnLabel);
   }
 
   // Register for external control
@@ -152,19 +127,9 @@ videoContainers.forEach(container => {
     container.addEventListener('mouseleave', stopPlay);
   }
 
-  playBtn?.addEventListener('click', (e) => { 
-    e.stopPropagation(); 
-    openModal(video); 
-  });
-  
+  // Mobile/Desktop tap-to-play behavior (replaces the modal)
   container.addEventListener('click', () => { 
-    if (window.innerWidth < 1024) {
-      // On mobile/tablet, click opens modal
-      openModal(video);
-    } else {
-      // On desktop, click toggles in-card playback
-      if (!video.paused) stopPlay(); else startPlay();
-    }
+    if (!video.paused) stopPlay(); else startPlay();
   });
 });
 
