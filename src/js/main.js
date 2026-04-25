@@ -148,6 +148,15 @@ function handleHash() {
     // Small delay to ensure any intersection observers don't immediately pause it
     setTimeout(() => ctrl.startPlay(), 100);
   }
+
+  // Scroll targeted card into view smoothly (CSS :target pseudo-class handles styling)
+  const targetCard = document.getElementById(hash);
+  if (targetCard) {
+    // Ensure it's scrolled into the center of viewport after a brief delay
+    setTimeout(() => {
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 250);
+  }
 }
 
 window.addEventListener('hashchange', handleHash);
