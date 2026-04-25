@@ -48,6 +48,10 @@
            hover:border-accent/30 hover:shadow-glow-card
            transition-all duration-300 cursor-default;
   }
+  .card:target {
+    @apply border-accent/60 shadow-glow-card ring-1 ring-accent/20 z-10;
+    transform: scale(1.02);
+  }
   .section-heading {
     @apply text-3xl lg:text-4xl font-semibold text-white mb-3;
   }
