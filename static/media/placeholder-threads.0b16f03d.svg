@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#1e2538"/>
+
+  <!-- Grid lines -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.15" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="monospace" font-size="13" fill="#38bdf8" opacity="0.7" letter-spacing="2">THREAD STATE DIAGRAM</text>
+
+  <!-- States: READY, RUNNING, BLOCKED, TERMINATED -->
+  <!-- READY box -->
+  <rect x="60" y="160" width="130" height="48" rx="8" fill="#161b27" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+  <text x="125" y="189" text-anchor="middle" font-family="monospace" font-size="13" fill="#38bdf8">READY</text>
+
+  <!-- RUNNING box -->
+  <rect x="335" y="160" width="130" height="48" rx="8" fill="#0ea5e9" fill-opacity="0.15" stroke="#38bdf8" stroke-width="2"/>
+  <text x="400" y="189" text-anchor="middle" font-family="monospace" font-size="13" fill="#38bdf8">RUNNING</text>
+
+  <!-- BLOCKED box -->
+  <rect x="335" y="290" width="130" height="48" rx="8" fill="#161b27" stroke="#38bdf8" stroke-width="1.5" opacity="0.7"/>
+  <text x="400" y="319" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">BLOCKED</text>
+
+  <!-- TERMINATED box -->
+  <rect x="610" y="160" width="130" height="48" rx="8" fill="#161b27" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
+  <text x="675" y="189" text-anchor="middle" font-family="monospace" font-size="11" fill="#475569">TERMINATED</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8" opacity="0.8"/>
+    </marker>
+    <marker id="arr-dim" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- READY → RUNNING (schedule) -->
+  <line x1="190" y1="184" x2="333" y2="184" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)" opacity="0.8"/>
+  <text x="262" y="175" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8" opacity="0.7">schedule</text>
+
+  <!-- RUNNING → READY (preempt / SIGVTALRM) -->
+  <line x1="335" y1="196" x2="192" y2="196" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)" opacity="0.6"/>
+  <text x="262" y="210" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8" opacity="0.6">SIGVTALRM</text>
+
+  <!-- RUNNING → BLOCKED (uthread_sleep) -->
+  <line x1="400" y1="208" x2="400" y2="288" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="418" y="252" font-family="monospace" font-size="10" fill="#64748b">sleep()</text>
+
+  <!-- BLOCKED → READY (wake) -->
+  <path d="M 335 314 Q 200 350 125 208" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)" opacity="0.6"/>
+  <text x="195" y="355" font-family="monospace" font-size="10" fill="#64748b">wake</text>
+
+  <!-- RUNNING → TERMINATED -->
+  <line x1="465" y1="184" x2="608" y2="184" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-dim)" opacity="0.6"/>
+  <text x="536" y="175" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">terminate</text>
+
+  <!-- NEW → READY (spawn) -->
+  <ellipse cx="60" cy="90" rx="42" ry="22" fill="#161b27" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
+  <text x="60" y="95" text-anchor="middle" font-family="monospace" font-size="11" fill="#64748b">NEW</text>
+  <line x1="80" y1="112" x2="110" y2="158" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)" opacity="0.5"/>
+  <text x="60" y="142" font-family="monospace" font-size="10" fill="#64748b">spawn</text>
+
+  <!-- sigsetjmp / siglongjmp label -->
+  <text x="400" y="415" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8" opacity="0.5">context switch via sigsetjmp / siglongjmp</text>
+</svg>
