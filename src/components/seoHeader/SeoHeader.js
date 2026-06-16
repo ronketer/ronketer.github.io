@@ -45,11 +45,13 @@ function SeoHeader() {
     email: mail,
     telephone: contactPageData.phoneSection?.subtitle,
     sameAs: sameAs,
-    jobTitle: job.title,
-    worksFor: {
-      "@type": "Organization",
-      name: job.company,
-    },
+    jobTitle: job?.title,
+    worksFor: job
+      ? {
+          "@type": "Organization",
+          name: job.company,
+        }
+      : undefined,
     address: {
       "@type": "PostalAddress",
       addressLocality: contactPageData.addressSection?.locality,
