@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a93f2ba941e58ccce14c249c71fdf293",
+    "revision": "da133a1358e7449a013df2184222269e",
     "url": "/index.html"
   },
   {
-    "revision": "952f112651954e3cc63a",
+    "revision": "6d62f26ddc6e835fe775",
     "url": "/static/css/main.4fafbf4f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.5f1ead2c.chunk.js"
   },
   {
-    "revision": "952f112651954e3cc63a",
-    "url": "/static/js/main.c081bd77.chunk.js"
+    "revision": "6d62f26ddc6e835fe775",
+    "url": "/static/js/main.0fcc46eb.chunk.js"
   },
   {
     "revision": "d52fe0ffbdef04936a31",
@@ -22,10 +22,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
     "url": "/static/media/Agustina.21f233e1.woff"
-  },
-  {
-    "revision": "bad3797865a0fde6fe985fd2b44b8554",
-    "url": "/static/media/Ashutosh_Hathidara_Resume_ML.bad37978.pdf"
   },
   {
     "revision": "4457817ac2b9993c65e81aa05828fe9c",
@@ -54,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee6539921d713482b8ccd4d0d23961bb",
     "url": "/static/media/Montserrat-Regular.ee653992.ttf"
+  },
+  {
+    "revision": "325fe5fd9012f0c0d95bc1bb8b7bfc6b",
+    "url": "/static/media/Ron_Keter_Resume_ML.325fe5fd.pdf"
   },
   {
     "revision": "16559172ca1d4d552390b48f19e102ba",
