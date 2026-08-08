@@ -120,3 +120,36 @@
     font-size: 14px;
   }
 }
+
+.repo-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.8rem;
+}
+
+.repo-demo-link {
+  font-family: "Google Sans Regular";
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in;
+  line-height: 1.1;
+  width: max-content;
+}
+
+.repo-demo-link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .repo-demo-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

@@ -2,6 +2,127 @@
   "closed": 2,
   "data": [
     {
+      "id": "PR_kwDOSUBNnM77MJRI",
+      "title": "Ex3 ron",
+      "url": "https://github.com/ronketer/intro-to-data-science/pull/5",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+        "url": "https://github.com/ronketer",
+        "login": "ronketer"
+      },
+      "createdAt": "2026-08-05T17:02:41Z",
+      "number": 5,
+      "changedFiles": 10,
+      "additions": 1324,
+      "deletions": 6,
+      "baseRepository": {
+        "name": "intro-to-data-science",
+        "url": "https://github.com/ronketer/intro-to-data-science",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+          "login": "ronketer",
+          "url": "https://github.com/ronketer"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOSUBNnM7ysVAe",
+      "title": "Ex3 ron",
+      "url": "https://github.com/ronketer/intro-to-data-science/pull/4",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+        "url": "https://github.com/ronketer",
+        "login": "ronketer"
+      },
+      "createdAt": "2026-07-16T20:17:25Z",
+      "number": 4,
+      "changedFiles": 44,
+      "additions": 4100,
+      "deletions": 88,
+      "baseRepository": {
+        "name": "intro-to-data-science",
+        "url": "https://github.com/ronketer/intro-to-data-science",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+          "login": "ronketer",
+          "url": "https://github.com/ronketer"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOSUBNnM7snQKC",
+      "title": "Ex3 ron",
+      "url": "https://github.com/ronketer/intro-to-data-science/pull/3",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+        "url": "https://github.com/ronketer",
+        "login": "ronketer"
+      },
+      "createdAt": "2026-07-01T09:52:18Z",
+      "number": 3,
+      "changedFiles": 12,
+      "additions": 6321,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "intro-to-data-science",
+        "url": "https://github.com/ronketer/intro-to-data-science",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+          "login": "ronketer",
+          "url": "https://github.com/ronketer"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOSUBNnM7snP68",
+      "title": "final changes - add automati download if  file not present in root",
+      "url": "https://github.com/ronketer/intro-to-data-science/pull/2",
+      "state": "OPEN",
+      "mergedBy": null,
+      "createdAt": "2026-07-01T09:52:06Z",
+      "number": 2,
+      "changedFiles": 57,
+      "additions": 5798,
+      "deletions": 1656,
+      "baseRepository": {
+        "name": "intro-to-data-science",
+        "url": "https://github.com/ronketer/intro-to-data-science",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+          "login": "ronketer",
+          "url": "https://github.com/ronketer"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOSUBNnM7pz6Wv",
+      "title": "add full implementation. missing rewrite for ex3.md and compiling to",
+      "url": "https://github.com/ronketer/intro-to-data-science/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+        "url": "https://github.com/ronketer",
+        "login": "ronketer"
+      },
+      "createdAt": "2026-06-23T19:49:19Z",
+      "number": 1,
+      "changedFiles": 12,
+      "additions": 6309,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "intro-to-data-science",
+        "url": "https://github.com/ronketer/intro-to-data-science",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/232895585?u=7055fab9c42d76aec24f503ddf1d7196494526b0&v=4",
+          "login": "ronketer",
+          "url": "https://github.com/ronketer"
+        }
+      }
+    },
+    {
       "id": "PR_kwDOLPT5Hs7nB6sS",
       "title": "feat: add nand2tetris language extension",
       "url": "https://github.com/zed-industries/extensions/pull/6508",
@@ -240,7 +361,7 @@
       }
     }
   ],
-  "merged": 7,
-  "open": 1,
-  "totalCount": 10
+  "merged": 11,
+  "open": 2,
+  "totalCount": 15
 }

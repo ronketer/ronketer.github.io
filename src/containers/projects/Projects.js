@@ -42,6 +42,7 @@ export default function Projects() {
                         totalCount
                       }
                       url
+                      homepageUrl
                       id
                       diskUsage
                       primaryLanguage {

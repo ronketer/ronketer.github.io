@@ -46,6 +46,24 @@ export default function GithubRepoCard({ repo, theme }) {
               logos={repo.languages}
             />
           </div>
+          {repo.homepageUrl && (
+            <div className="repo-card-footer">
+              <a
+                className="repo-demo-link"
+                href={repo.homepageUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: theme.body,
+                  backgroundColor: theme.text,
+                  border: `solid 1px ${theme.text}`,
+                }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                ▶ Live Demo
+              </a>
+            </div>
+          )}
           {/* <div className="repo-stats">
           <div className="repo-left-stat">
             <span>

@@ -5,6 +5,7 @@
       "name": "mapreduce-framework",
       "createdAt": "2025-10-10T11:52:09Z",
       "url": "https://github.com/ronketer/mapreduce-framework",
+      "homepageUrl": null,
       "description": null,
       "isFork": false,
       "languages": [
@@ -19,6 +20,7 @@
       "name": "taskboard-app",
       "createdAt": "2025-10-10T11:51:11Z",
       "url": "https://github.com/ronketer/taskboard-app",
+      "homepageUrl": null,
       "description": null,
       "isFork": false,
       "languages": [
@@ -41,38 +43,11 @@
       ]
     },
     {
-      "id": "R_kgDOQAbOFQ",
-      "name": "kitti-visual-slam",
-      "createdAt": "2025-10-11T10:03:39Z",
-      "url": "https://github.com/ronketer/kitti-visual-slam",
-      "description": null,
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOReeMmA",
-      "name": "Local-anki-agent",
-      "createdAt": "2026-03-04T17:48:20Z",
-      "url": "https://github.com/ronketer/Local-anki-agent",
-      "description": "Autonomous multi-agent pipeline: Siyuan Notes → Anki flashcards via AutoGen, Ollama, and deterministic agent orchestration",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
       "id": "R_kgDORbGvAA",
       "name": "procedural-game-engine",
       "createdAt": "2026-02-28T12:40:29Z",
       "url": "https://github.com/ronketer/procedural-game-engine",
+      "homepageUrl": null,
       "description": null,
       "isFork": false,
       "languages": [
@@ -87,6 +62,41 @@
       "name": "Stereo-Mosaicing",
       "createdAt": "2026-04-17T20:42:29Z",
       "url": "https://github.com/ronketer/Stereo-Mosaicing",
+      "homepageUrl": null,
+      "description": null,
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOP_5X5w",
+      "name": "uthreads-scheduler",
+      "createdAt": "2025-10-10T11:51:51Z",
+      "url": "https://github.com/ronketer/uthreads-scheduler",
+      "homepageUrl": null,
+      "description": null,
+      "isFork": false,
+      "languages": [
+        {
+          "name": "C++",
+          "iconifyClass": "logos-c-plusplus"
+        },
+        {
+          "name": "C",
+          "iconifyClass": "logos-c"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOThRr8A",
+      "name": "research-paper-rag",
+      "createdAt": "2026-07-23T13:16:59Z",
+      "url": "https://github.com/ronketer/research-paper-rag",
+      "homepageUrl": null,
       "description": null,
       "isFork": false,
       "languages": [

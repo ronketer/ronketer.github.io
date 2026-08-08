@@ -111,6 +111,7 @@ const query_pinned_projects = {
 		          name
 		          createdAt,
 		          url,
+		          homepageUrl,
 		          description,
 		          isFork,
 		          languages(first:10){
