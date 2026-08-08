@@ -220,7 +220,7 @@ const degrees = {
       subtitle: "B.Sc. in Computer Science",
       logo_path: "education.svg",
       alt_name: "Hebrew University of Jerusalem",
-      duration: "Expected Graduation: September 2027",
+      duration: "Expected Graduation: September 2028",
       descriptions: [
         "⚡ 3rd-year Computer Science student.",
         "⚡ Focus on systems programming, concurrency, computer vision, and backend APIs.",
@@ -255,6 +255,14 @@ const certifications = {
       logo_path: "deeplearning_ai_logo.png",
       certificate_link: "",
       alt_name: "Anthropic",
+      color_code: "#cc785c33",
+    },
+    {
+      title: "AI Agents Course",
+      subtitle: "- Hugging Face",
+      logo_path: "hf-logo.svg",
+      certificate_link: "",
+      alt_name: "Hugging Face",
       color_code: "#cc785c33",
     },
   ],
