@@ -23,9 +23,9 @@ const greeting = {
   logo_name: "RonKeter",
   nickname: "ronketer",
   subTitle:
-    "3rd-year Computer Science student at The Hebrew University of Jerusalem. I build OS systems, CV pipelines, and backend APIs.",
-  resumeLink: "",
-  portfolio_repository: "https://github.com/ronketer/masterPortfolio",
+    "Computer Science student at the Hebrew University of Jerusalem. Expected graduation: September 2027. I build backend applications, computer vision pipelines, and local AI tools.",
+  resumeLink: "/resume",
+  portfolio_repository: "https://github.com/ronketer/ronketer.github.io",
   githubProfile: "https://github.com/ronketer",
 };
 
@@ -56,9 +56,9 @@ const skills = {
       title: "Systems & Backend Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Developing high-performance systems in C++ and Java with multi-threading, concurrency, and custom schedulers",
-        "⚡ Building robust backend APIs and services using Node.js, Express, and PostgreSQL",
-        "⚡ Designing clean architectures using design patterns, custom memory structures, and lock-free concurrency",
+        "C/C++ and Java coursework in concurrency and simulation, with current limitations documented in each repository.",
+        "Express and PostgreSQL applications with board-level authorization, SQL migrations, transactions, and database tests.",
+        "Language support tooling for Zed, using community Tree-sitter parsers and project-specific queries.",
       ],
       softwareSkills: [
         {
@@ -130,9 +130,9 @@ const skills = {
       title: "Computer Vision & Machine Learning",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Reconstructing 3D trajectories and processing KITTI dataset frames using stereo visual SLAM",
-        "⚡ Building image processing and panorama stitching pipelines with Lucas-Kanade optical flow and corner detection",
-        "⚡ Recovering camera ego-motion and optimizing spatial estimation with AKAZE features and RANSAC outlier rejection",
+        "Calibrated structure-from-motion and stereo odometry with explicit validation and reconstruction diagnostics.",
+        "Image-processing pipelines using optical flow, corner detection, and pushbroom panorama synthesis.",
+        "Feature matching, RANSAC estimation, and bundle adjustment, with library contributions and experiment conditions stated.",
       ],
       softwareSkills: [
         {
@@ -159,22 +159,15 @@ const skills = {
       ],
     },
     {
-      title: "Cloud & DevOps",
+      title: "Local Delivery & Testing",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Containerizing services and configuring multi-stage Docker builds for local development and production",
-        "⚡ Orchestrating deployments using Kubernetes (Minikube) manifests and local environments",
-        "⚡ Automating testing, coverage verification, and deployments via GitHub Actions CI/CD pipelines",
-        "⚡ Managing cloud infrastructure on Amazon Web Services (AWS)",
+        "Docker images and Compose configuration for local application development and demonstration.",
+        "Kubernetes manifests for local experimentation; database and migration prerequisites remain explicit.",
+        "GitHub Actions for automated tests, scoped coverage checks, client builds, and container image builds.",
+        "Interests include algorithms, systems programming, robotics perception, and embedded development.",
       ],
       softwareSkills: [
-        {
-          skillName: "AWS",
-          fontAwesomeClassname: "logos:aws",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
         {
           skillName: "Docker",
           fontAwesomeClassname: "logos:docker-icon",
@@ -220,10 +213,10 @@ const degrees = {
       subtitle: "B.Sc. in Computer Science",
       logo_path: "education.svg",
       alt_name: "Hebrew University of Jerusalem",
-      duration: "Expected Graduation: September 2028",
+      duration: "Expected graduation: September 2027",
       descriptions: [
-        "⚡ 3rd-year Computer Science student.",
-        "⚡ Focus on systems programming, concurrency, computer vision, and backend APIs.",
+        "Computer Science student.",
+        "Focus on algorithms, systems programming, computer vision, and backend applications.",
       ],
       website_link: "https://new.huji.ac.il/en",
     },
@@ -273,7 +266,7 @@ const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Volunteership",
   description:
-    "I am a CS student looking for SWE, systems, backend, and DevOps roles.",
+    "I am a Computer Science student looking for student, internship, and junior opportunities in software engineering and AI/ML engineering.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -322,7 +315,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "Selected work spanning OS internals, computer vision, and full-stack applications.",
+    "Selected backend applications, computer vision projects, local AI tools, and editor tooling. Course origins and experimental limits are stated in each repository.",
   avatar_image_path: "projects_image.svg",
 };
 

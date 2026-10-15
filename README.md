@@ -1,3 +1,11 @@
+# Ron Keter portfolio
+
+Source for my portfolio at https://ronketer.github.io/. Adapted from [ashutosh1919/masterPortfolio](https://github.com/ashutosh1919/masterPortfolio). The upstream MIT license and credits below are retained.
+
+The application source is on `main`; GitHub Pages serves the compiled `gh-pages` branch. Run `npm ci` and `npm run build` for a local build. Publication is a separate deployment step.
+
+## Upstream template documentation and credits
+
 <p align="center"> 
     <img src="images/masterportfolio-banner-light.png" align="center" height="150"></img>
 </p>
